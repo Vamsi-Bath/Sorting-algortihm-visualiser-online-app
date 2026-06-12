@@ -1,0 +1,44 @@
+services:
+  sorting-game-db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: sorting_game
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d sorting_game"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  sorting-game-api:
+    build: ./sorting-game-api
+    environment:
+      SECRET_KEY: change-this-secret
+      DATABASE_URL: postgresql://postgres:postgres@sorting-game-db:5432/sorting_game
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./sorting-game-api:/app
+    depends_on:
+      sorting-game-db:
+        condition: service_healthy
+
+  sorting-game-web:
+    build: ./sorting-game-web
+    environment:
+      VITE_API_BASE: http://localhost:8000
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./sorting-game-web:/app
+      - /app/node_modules
+    depends_on:
+      - sorting-game-api
+
+volumes:
+  postgres_data:
