@@ -160,7 +160,11 @@ The original project used Tkinter, Pygame, local SQLite, and text files for temp
 ## Screenshots
 
 ### Page 1
-![Page 1](assets/page1.png)
+![Page 1](assets/Page1.png)
 
 ### Page 2
-![Page 2](assets/page2.png)
+![Page 2](assets/Page2.png)
+
+### Page 3
+![Page 3](assets/Analystics.png)
+
