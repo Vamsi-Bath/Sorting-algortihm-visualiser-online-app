@@ -21,15 +21,6 @@ An full-stack online Sorting Algorithm Interactive Game.
 - Top 5 leaderboard
 - Class and sorting type analytics
 
-## Screenshots
-
-### Page 1
-![Page 1](page1.png)
-
-### Page 2
-![Page 2](page2.png)
-
-  
 ## Run loch Docker
 
 ```bash
