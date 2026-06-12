@@ -156,3 +156,11 @@ The original project used Tkinter, Pygame, local SQLite, and text files for temp
 - Add analytics charts like a dashboard
 - Add Playwright end-to-end tests
 - Add Alembic migrations for production database changes
+
+## Screenshots
+
+### Page 1
+![Page 1](assets/page1.png)
+
+### Page 2
+![Page 2](assets/page2.png)
