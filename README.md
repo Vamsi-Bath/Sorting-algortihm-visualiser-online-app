@@ -110,8 +110,6 @@ Included frontend tests:
 
 ### Unit tests
 
-Unit tests check small isolated logic:
-
 - Bubble sort pass generation
 - Insertion sort pass generation
 - Score calculation
