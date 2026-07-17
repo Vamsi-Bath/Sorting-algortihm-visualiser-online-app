@@ -2,7 +2,7 @@
 
 An full-stack online Sorting Algorithm Interactive Game.
 
-## Stack
+## Stackggggg
 
 - Web app: React + TypeScript + Vite
 - API: Python FastAPI
